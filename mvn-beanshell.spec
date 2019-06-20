@@ -4,7 +4,7 @@
 #
 Name     : mvn-beanshell
 Version  : 2.0b4
-Release  : 1
+Release  : 2
 URL      : https://repo1.maven.org/maven2/org/beanshell/bsh/2.0b4/bsh-2.0b4.jar
 Source0  : https://repo1.maven.org/maven2/org/beanshell/bsh/2.0b4/bsh-2.0b4.jar
 Source1  : https://repo1.maven.org/maven2/org/beanshell/beanshell/2.0b4/beanshell-2.0b4.pom
@@ -33,11 +33,11 @@ data components for the mvn-beanshell package.
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/beanshell/bsh/2.0b4
 cp %{SOURCE0} %{buildroot}/usr/share/java/.m2/repository/org/beanshell/bsh/2.0b4
 
-mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/beanshell/bsh/2.0b4
-cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/beanshell/bsh/2.0b4
-
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/beanshell/beanshell/2.0b4
-cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/beanshell/beanshell/2.0b4
+cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/beanshell/beanshell/2.0b4
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/beanshell/bsh/2.0b4
+cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/beanshell/bsh/2.0b4
 
 
 %files
@@ -45,6 +45,6 @@ cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/beanshell/beanshell
 
 %files data
 %defattr(-,root,root,-)
-/usr/share/java/.m2/repository/org/beanshell/beanshell/2.0b4/bsh-2.0b4.pom
-/usr/share/java/.m2/repository/org/beanshell/bsh/2.0b4/beanshell-2.0b4.pom
+/usr/share/java/.m2/repository/org/beanshell/beanshell/2.0b4/beanshell-2.0b4.pom
 /usr/share/java/.m2/repository/org/beanshell/bsh/2.0b4/bsh-2.0b4.jar
+/usr/share/java/.m2/repository/org/beanshell/bsh/2.0b4/bsh-2.0b4.pom
