@@ -4,11 +4,13 @@
 #
 Name     : mvn-beanshell
 Version  : 2.0b4
-Release  : 2
+Release  : 3
 URL      : https://repo1.maven.org/maven2/org/beanshell/bsh/2.0b4/bsh-2.0b4.jar
 Source0  : https://repo1.maven.org/maven2/org/beanshell/bsh/2.0b4/bsh-2.0b4.jar
-Source1  : https://repo1.maven.org/maven2/org/beanshell/beanshell/2.0b4/beanshell-2.0b4.pom
-Source2  : https://repo1.maven.org/maven2/org/beanshell/bsh/2.0b4/bsh-2.0b4.pom
+Source1  : https://repo1.maven.org/maven2/org/apache-extras/beanshell/bsh/2.0b6/bsh-2.0b6.jar
+Source2  : https://repo1.maven.org/maven2/org/apache-extras/beanshell/bsh/2.0b6/bsh-2.0b6.pom
+Source3  : https://repo1.maven.org/maven2/org/beanshell/beanshell/2.0b4/beanshell-2.0b4.pom
+Source4  : https://repo1.maven.org/maven2/org/beanshell/bsh/2.0b4/bsh-2.0b4.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : LGPL-2.1-only SPL-1.0
@@ -33,11 +35,17 @@ data components for the mvn-beanshell package.
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/beanshell/bsh/2.0b4
 cp %{SOURCE0} %{buildroot}/usr/share/java/.m2/repository/org/beanshell/bsh/2.0b4
 
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache-extras/beanshell/bsh/2.0b6
+cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/apache-extras/beanshell/bsh/2.0b6
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache-extras/beanshell/bsh/2.0b6
+cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/apache-extras/beanshell/bsh/2.0b6
+
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/beanshell/beanshell/2.0b4
-cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/org/beanshell/beanshell/2.0b4
+cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/beanshell/beanshell/2.0b4
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/beanshell/bsh/2.0b4
-cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/beanshell/bsh/2.0b4
+cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/org/beanshell/bsh/2.0b4
 
 
 %files
@@ -45,6 +53,8 @@ cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/beanshell/bsh/2.0b4
 
 %files data
 %defattr(-,root,root,-)
+/usr/share/java/.m2/repository/org/apache-extras/beanshell/bsh/2.0b6/bsh-2.0b6.jar
+/usr/share/java/.m2/repository/org/apache-extras/beanshell/bsh/2.0b6/bsh-2.0b6.pom
 /usr/share/java/.m2/repository/org/beanshell/beanshell/2.0b4/beanshell-2.0b4.pom
 /usr/share/java/.m2/repository/org/beanshell/bsh/2.0b4/bsh-2.0b4.jar
 /usr/share/java/.m2/repository/org/beanshell/bsh/2.0b4/bsh-2.0b4.pom
